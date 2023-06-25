@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, select, input {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+@layer utilities {
+  .h-72px{
+    height: 4.5rem;
+  }
+}
+/* 预留动态换肤(颜色必须是rgb值才能设置透明度不能是#fff) */
+@layer base {
+  :root{
+    --color-button: 0, 162, 233;
+    --color-bg-head: 20, 34, 47;
+    --color-bg-content: 17, 23, 35;
+    --color-message-success: 16, 185, 129;
+    --color-message-error: 239, 68, 68;
+    --color-message-waring: 245, 158, 11;
+    --text-color-grey: 153, 153, 153
+  }
+}
